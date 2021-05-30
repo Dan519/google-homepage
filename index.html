@@ -2,10 +2,6 @@
 <html>
     <head>
         <style>
-            body {
-                -webkit-appearance: none;
-                -moz-appearance:none;
-            }
             #left-nav {
                 position: absolute;
                 display: flex;
@@ -26,16 +22,49 @@
             }
             #google-icon {
                 display: block;
+                position: relative;
                 margin-left: auto;
                 margin-right: auto;
+                top: 52px;
             }
             #search {
-                display: block;
+                width: 465px;
+                height: 30px;
+                border: none;
+                background-color: transparent;
+            }
+            #search:focus {
+                outline: none;
+            }
+            #search-box {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                position: relative;
                 margin-left: auto;
                 margin-right: auto;
+                top: 78px;
+                width: 582px;
+                height: 44px;
+                background-color: transparent;
+                border-style: solid;
+                border-color:rgb(223, 225, 229);
+                border-width: 1px;
+                border-radius: 40px;
+            }
+            #search-box:hover {
+                box-shadow: 0px 1px 5px 2px rgb(223, 225, 229);
+            }
+            #magnifying-glass{
+                height: 17px;
+            }
+            #microphone {
+                height: 20px;
             }
             #search-buttons {
+                position: relative;
                 text-align: center;
+                top: 150px;
             }
             #left-footer {
                 position: absolute;
@@ -87,7 +116,7 @@
                 width: 96px;
                 height: 36px;
                 border: none;
-                border-radius: 6%;
+                border-radius: 4px;
             }
             #sign-in:hover{
                 background-color: rgb(42, 125, 233);
@@ -119,11 +148,17 @@
             </div>
         </nav>
         <img id="google-icon" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
-        <input id="search" type="search">
-        <div id="search-buttons">
-            <button>Google Search</button>
-            <button>I'm Feeling Lucky</button>
-        </div>
+        <form>
+            <div id="search-box">
+                <img id="magnifying-glass" alt="magnifying glass" src="https://icon-library.com/images/google-search-magnifying-glass-icon/google-search-magnifying-glass-icon-5.jpg">
+                <input id="search" type="text">
+                <img id="microphone" alt="microphone" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/40px-Google_mic.svg.png">
+            </div>
+            <div id="search-buttons">
+                <button type="submit">Google Search</button>
+                <button type="submit">I'm Feeling Lucky</button>
+            </div>
+        </form>
         <footer>
             <div id="left-footer">
                 <a href="#">Advertising</a>
